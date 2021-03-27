@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>appendChild</title>
+</head>
+<body>
+
+  <div id="carro">
+
+  </div>
+
+
+  <script>
+
+    var fusca = document.createElement("p");
+    fusca.innerHTML = "Fusca";
+
+    var hb = document.createElement("p");
+    hb.innerHTML = "HB-20"
+
+    document.getElementById("carro").appendChild(fusca);
+    document.getElementById("carro").appendChild(hb);
+
+  </script>
+
+</body>
+</html>
