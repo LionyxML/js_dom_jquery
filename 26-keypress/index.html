@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>keypress</title>
+</head>
+<body>
+  <input type="text" id="text">
+  <div id="result" style="display: none">É ENTER!</div>
+
+  <script>
+    var text = document.getElementById("text");
+
+    text.addEventListener("keypress", function(event) {
+      console.log(event.keyCode);
+      if(event.keyCode == 13)
+        result.style.display = "block";
+      else
+        result.style.display = "none";
+    });
+
+    text.addEventListener("keyup", function(event) {
+      text.value = event.key;
+      console.log(event);
+    });
+
+  </script>
+</body>
+</html>

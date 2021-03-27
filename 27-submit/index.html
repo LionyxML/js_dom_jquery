@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>submit</title>
+
+  <style>
+    .error {
+      border : 2px solid red;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" method="post">
+    <input type="text" name="name" value="rahul">
+    <input type="email" name="email" value="rahul.juliato@gmail.com">
+    <button type="submit">enter</button>
+  </form>
+
+
+  <script>
+    var form = document.querySelector("form");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      var isValid = true;
+
+      for(var i = 0; i < this.elements.length; i++) {
+        var item = this.elements[i];
+
+        if(item.type !== "submit"){
+          if(item.value == "") {
+            item.classList.add("error");
+            isValid = false;
+          } else {
+            item.classList.remove("error");
+          }
+        }
+      }
+
+    console.log(isValid);
+
+    });
+
+  </script>
+
+</body>
+</html>

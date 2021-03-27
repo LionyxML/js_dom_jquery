@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="search">
+
+  <div id="result"></div>
+
+  <script>
+
+    var text = document.getElementById("search");
+    var result = document.getElementById("result");
+    var resultaDefaultText = "Nenhum resultado";
+
+    text.addEventListener("keyup", function() {
+      var value = this.value;
+      if(value != "")
+        result.innerText = this.value;
+      else
+        result.innerText = resultaDefaultText;
+    });
+
+  </script>
+
+</body>
+</html>
