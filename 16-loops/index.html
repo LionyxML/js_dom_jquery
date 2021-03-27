@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>loops</title>
+</head>
+<body>
+
+
+  <div class="js">react</div>
+  <div class="js">angular</div>
+  <div class="js">typescript</div>
+  <div class="js">es6</div>
+
+
+
+  <script>
+
+  var js = document.getElementsByClassName("js");
+  var array = [11, "dois", "33", 44];
+
+  for(let i = 0; i < js.length; i++) {
+    let texto = js[i].innerHTML;
+    js[i].innerHTML = "curso de: " + texto + " - clique aqui!" ;
+  }
+
+  array.forEach(function(element, index) {
+    console.log(element, index);
+  });
+
+  array.map(function(element, index) {
+    console.log(element);
+  });
+
+  var nova = array.map(function(element, index) {
+    if(element === 11) {
+      element = 'outras coisas';
+    }
+
+    return element;
+  });
+
+  console.log(nova);
+
+
+  var i = 0;
+  while(i < 5){
+    console.log('oi');
+    i++;
+  }
+
+
+  </script>
+
+</body>
+</html>
