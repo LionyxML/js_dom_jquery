@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>conditionals</title>
+</head>
+<body>
+
+
+
+  <script>
+
+  var a = "abc";
+  var b = "cba";
+
+  if (a == 'abc') console.log(true);
+  if (a == 'abc') {
+    console.log(true);
+  }
+
+  if (a == '123') {
+    console.log("bug");
+  } else {
+    console.log(true);
+  }
+
+  switch(a) {
+    case 'abc' :
+       console.log('YEP!');
+       break;
+    case '123' :
+       console.log("bug!");
+       break;
+    default:
+       console.log(false);
+  }
+
+  </script>
+
+</body>
+</html>
