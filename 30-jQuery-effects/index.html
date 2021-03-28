@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>effects</title>
+
+  <style>
+    body {
+      background-color: #efefef;
+    }
+
+    .box {
+      position: relative;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+  <hr>
+
+  <script src="../28-jQuery/jquery-3.6.0.min.js"></script>
+  <script>
+
+  var box = $(".box");
+  box.animate({
+    width: "200",
+    height: "200px",
+    left: "200"
+  },5000);
+
+  // box.show();
+  // box.hide();
+  // box.fadeIn(100);
+  box.fadeOut(1000);
+
+  </script>
+
+</body>
+</html>
