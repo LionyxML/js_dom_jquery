@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>serialize</title>
+
+  <style>
+
+    ul {
+      list-style: none;
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    li {
+      margin: 10px;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: white;
+      padding: 20px 20px;
+      text-decoration: none;
+
+    }
+
+    a:hover,
+    a.active {
+      color: black;
+      background-color: white;
+    }
+
+    .espaco {
+      display: block;
+      margin-top: 50px;
+      padding: 10px 10px;
+      height: 1200px;
+    }
+
+    .btn {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: black;
+      color: white;
+      height: 40px;
+      border: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <ul>
+    <li><a href="#top1" class="link">Tópico 1</a></li>
+    <li><a href="#top2" class="link">Tópico 2</a></li>
+    <li><a href="#top3" class="link">Tópico 3</a></li>
+  </ul>
+
+  <div class="espaco">
+    <h2 id="top1">Tópico 1</h2>
+  </div>
+
+  <div class="espaco">
+    <h2 id="top2">Tópico 2</h2>
+  </div>
+
+  <div class="espaco">
+    <h2 id="top3">Tópico 3</h2>
+  </div>
+
+
+  <button class="btn">Voar Subir</button>
+
+  <script src="../28-jQuery/jquery-3.6.0.min.js"></script>
+  <script>
+
+      var link = $("li a");
+      var subir = $(".btn");
+
+      $(window).scroll(function() {
+        var minhaPosicao = $(this).scrollTop();
+        console.log(minhaPosicao);
+        if(minhaPosicao >= 150){
+          subir.fadeIn();
+        } else {
+          subir.fadeOut();
+        }
+      });
+
+      link.on("click", function(){
+        var seletor = $(this).attr('href');
+        var posicao = $(seletor).offset().top;
+
+        $("html, body").animate({scrollTop: posicao - 60}, 1000);
+
+      });
+
+      subir.on("click", function() {
+        $("html, body").animate({scrollTop: 0}, 500);
+      });
+
+
+
+  </script>
+
+</body>
+</html>
