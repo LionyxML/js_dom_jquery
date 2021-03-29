@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>delay</title>
+
+</head>
+<body>
+
+  <button>Click here!</button>
+  <div class="mensagem">Hello World!</div>
+
+
+  <script src="../28-jQuery/jquery-3.6.0.min.js"></script>
+  <script>
+
+    var button = $("button");
+    var mensagem = $(".mensagem");
+
+    button.on("click", function() {
+      mensagem.delay(3000).fadeOut();   // é o set time out do js encapsulado
+    });
+
+
+  </script>
+
+</body>
+</html>
